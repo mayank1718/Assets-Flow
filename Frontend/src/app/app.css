@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand-yellow: #F4D35E;
+  --brand-green: #2E7D4F;
+  --brand-green-deep: #205B3A;
+  --surface-yellow: #FFF8D9;
+  --surface-green: #E8F3E9;
+  --warm-white: #FCFCF8;
+  --dark-charcoal: #24312A;
+  --muted-green-gray: #68756C;
+  --soft-border: #E3E9E2;
+}
+
+@theme {
+  --color-slate-50: var(--warm-white);
+  --color-slate-100: #F2F6F0;
+  --color-slate-200: var(--soft-border);
+  --color-slate-300: #CDD8CE;
+  --color-slate-400: #89958B;
+  --color-slate-500: var(--muted-green-gray);
+  --color-slate-600: #536158;
+  --color-slate-700: #3C4A40;
+  --color-slate-800: #2D3B32;
+  --color-slate-900: var(--dark-charcoal);
+  --color-slate-950: #17231A;
+
+  /* Map blue/indigo utilities to verdant green palette so all existing components stay harmonious */
+  --color-blue-50: var(--surface-green);
+  --color-blue-100: #D7E9D9;
+  --color-blue-200: #B9D9BE;
+  --color-blue-300: #92C49B;
+  --color-blue-400: #67A979;
+  --color-blue-500: #418A5D;
+  --color-blue-600: var(--brand-green);
+  --color-blue-700: var(--brand-green-deep);
+  --color-blue-800: #19492F;
+  --color-blue-900: #153B27;
+
+  --color-emerald-50: var(--surface-green);
+  --color-emerald-100: #D7E9D9;
+  --color-emerald-200: #B9D9BE;
+  --color-emerald-500: #418A5D;
+  --color-emerald-600: var(--brand-green);
+  --color-emerald-700: var(--brand-green-deep);
+  --color-emerald-800: #19492F;
+
+  --color-green-50: var(--surface-green);
+  --color-green-100: #D7E9D9;
+  --color-green-200: #B9D9BE;
+  --color-green-500: #418A5D;
+  --color-green-600: var(--brand-green);
+  --color-green-700: var(--brand-green-deep);
+  --color-green-800: #19492F;
+
+  --color-amber-50: var(--surface-yellow);
+  --color-amber-100: #F8E8A0;
+  --color-amber-200: #F0D675;
+  --color-amber-400: var(--brand-yellow);
+  --color-amber-500: #A87900;
+  --color-amber-600: #8D6500;
+  --color-amber-700: #705000;
+  --color-amber-800: #584000;
+
+  --color-yellow-50: var(--surface-yellow);
+  --color-yellow-100: #F8E8A0;
+  --color-yellow-200: #F0D675;
+  --color-yellow-400: var(--brand-yellow);
+  --color-yellow-500: #D3B33F;
+  --color-yellow-600: #8D7400;
+  --color-yellow-700: #705D00;
+
+  --color-indigo-50: var(--surface-green);
+  --color-indigo-100: #D7E9D9;
+  --color-indigo-200: #B9D9BE;
+  --color-indigo-500: #418A5D;
+  --color-indigo-600: var(--brand-green);
+  --color-indigo-700: var(--brand-green-deep);
+  --color-violet-50: var(--surface-yellow);
+  --color-violet-200: #F0D675;
+  --color-violet-700: #705D00;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--warm-white);
+    color: var(--dark-charcoal);
+  }
+
+  input,
+  select,
+  textarea {
+    accent-color: var(--brand-green);
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
