@@ -123,7 +123,9 @@ export const isNavItemActive = (item, isActive, pathname, hash) => {
   if (
     item.to === "/bookings" &&
     (pathname === "/bookings/review" ||
-      pathname.startsWith("/bookings/review/"))
+      pathname.startsWith("/bookings/review/") ||
+      pathname === "/bookings/create" ||
+      pathname.startsWith("/bookings/create/"))
   ) {
     return false;
   }

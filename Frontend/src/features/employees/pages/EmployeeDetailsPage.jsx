@@ -45,7 +45,6 @@ export const EmployeeDetailsPage = () => {
   const [error, setError] = useState(null);
   const [statusDialog, setStatusDialog] = useState(false);
   const [statusLoading, setStatusLoading] = useState(false);
-
   useEffect(() => {
     const loadData = async () => {
       setLoading(true);
@@ -209,10 +208,10 @@ export const EmployeeDetailsPage = () => {
                 <Mail className="w-3.5 h-3.5 text-slate-400" />
                 {employee.email}
               </span>
-              {employee.employeeId && (
+              {employee._id && (
                 <span className="flex items-center gap-1.5 font-mono">
                   <BadgeCheck className="w-3.5 h-3.5 text-slate-400" />
-                  ID: {employee.employeeId}
+                  ID: {employee._id}
                 </span>
               )}
             </div>
@@ -247,9 +246,9 @@ export const EmployeeDetailsPage = () => {
                 Employee ID
               </dt>
               <dd className="font-mono font-semibold text-slate-900">
-                {employee.employeeId ? (
+                {employee._id ? (
                   <span className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-xs">
-                    {employee.employeeId}
+                    {employee._id}
                   </span>
                 ) : (
                   "—"
