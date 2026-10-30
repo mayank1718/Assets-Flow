@@ -319,7 +319,7 @@ export const BookingListPage = () => {
             {isEmployee && (
               <Link
                 to="/bookings/create"
-                className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-2xs"
+                className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 transition-colors shadow-2xs"
               >
                 <CalendarPlus className="w-4 h-4 stroke-[2.25]" />
                 Request Booking
@@ -329,7 +329,7 @@ export const BookingListPage = () => {
             {isManagerOrAdmin && (
               <Link
                 to="/bookings/review"
-                className="inline-flex items-center gap-2 h-9 px-3.5 rounded-lg text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 hover:bg-blue-100/70 transition-colors"
+                className="inline-flex items-center gap-2 h-9 px-3.5 rounded-lg text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100/70 transition-colors"
               >
                 <Check className="w-4 h-4" />
                 Review Requests ({stats.pending})
@@ -346,7 +346,7 @@ export const BookingListPage = () => {
           value={loading ? "—" : stats.total}
           subtitle={isEmployee ? "Your total requests" : "All registered reservations"}
           icon={CalendarDays}
-          iconColor="text-blue-600 bg-blue-50 border-blue-100"
+          iconColor="text-emerald-600 bg-emerald-50 border-emerald-100"
         />
         <StatCard
           title="Pending Approval"

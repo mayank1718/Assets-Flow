@@ -118,7 +118,7 @@ export const AdminDashboard = () => {
       render: (item) => (
         <Link
           to={`/assets/${item._id}`}
-          className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+          className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
         >
           View
           <ArrowRight className="w-3.5 h-3.5" />

@@ -203,7 +203,7 @@ export const EditEmployeePage = () => {
                 className={`w-full h-11 px-3.5 rounded-lg border text-sm text-slate-900 bg-white placeholder:text-slate-400 outline-none transition-all ${
                   fieldErrors.fullName
                     ? "border-red-400 focus:ring-2 focus:ring-red-100"
-                    : "border-slate-200 focus:ring-2 focus:ring-blue-100 focus:border-blue-500"
+                    : "border-slate-200 focus:ring-2 focus:ring-emerald-200 focus:border-emerald-600"
                 } disabled:opacity-50 disabled:bg-slate-50`}
               />
             </div>
@@ -235,7 +235,7 @@ export const EditEmployeePage = () => {
                 className={`w-full h-11 px-3.5 rounded-lg border text-sm text-slate-900 bg-white placeholder:text-slate-400 outline-none transition-all ${
                   fieldErrors.email
                     ? "border-red-400 focus:ring-2 focus:ring-red-100"
-                    : "border-slate-200 focus:ring-2 focus:ring-blue-100 focus:border-blue-500"
+                    : "border-slate-200 focus:ring-2 focus:ring-emerald-200 focus:border-emerald-600"
                 } disabled:opacity-50 disabled:bg-slate-50`}
               />
             </div>
@@ -263,7 +263,7 @@ export const EditEmployeePage = () => {
               onChange={handleChange}
               placeholder="e.g. EMP-1042"
               disabled={saving}
-              className="w-full h-11 px-3.5 font-mono rounded-lg border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 disabled:opacity-50 disabled:bg-slate-50 transition-all"
+              className="w-full h-11 px-3.5 font-mono rounded-lg border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-200 focus:border-emerald-600 disabled:opacity-50 disabled:bg-slate-50 transition-all"
             />
             <p className="mt-1 text-[11px] text-slate-500">
               Unique internal staff identifier for hardware tracking.

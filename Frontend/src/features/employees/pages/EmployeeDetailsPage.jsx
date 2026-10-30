@@ -176,7 +176,7 @@ export const EmployeeDetailsPage = () => {
 
           <Link
             to={`/employees/${employee._id}/edit`}
-            className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-2xs"
+            className="inline-flex items-center gap-1.5 h-9 px-4 rounded-lg text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 transition-colors shadow-2xs"
           >
             <Edit className="w-3.5 h-3.5" />
             Edit Profile
@@ -187,7 +187,7 @@ export const EmployeeDetailsPage = () => {
       {/* Profile Card Header */}
       <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs mb-6">
         <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-5 border-b border-slate-100">
-          <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-2xl font-bold uppercase flex-shrink-0 shadow-2xs">
+          <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold uppercase flex-shrink-0 shadow-2xs">
             {(employee.fullName || employee.name || employee.email || "E")
               .charAt(0)
               .toUpperCase()}

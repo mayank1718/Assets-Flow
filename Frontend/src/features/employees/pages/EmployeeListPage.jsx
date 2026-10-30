@@ -35,7 +35,6 @@ export const EmployeeListPage = () => {
   const [statusDialog, setStatusDialog] = useState(null); // { id, name, isActive }
   const [statusLoading, setStatusLoading] = useState(false);
   const [feedback, setFeedback] = useState(null); // { type: 'success' | 'error', message: string }
-
   useEffect(() => {
     fetchEmployeesHandler();
     fetchDepartmentsHandler();
@@ -61,7 +60,7 @@ export const EmployeeListPage = () => {
     return employees.filter((emp) => {
       const name = (emp.fullName || emp.name || "").toLowerCase();
       const email = (emp.email || "").toLowerCase();
-      const empId = (emp.employeeId || "").toLowerCase();
+      const empId = (emp._id || "").toLowerCase();
       const dept = getDeptName(emp.department).toLowerCase();
       return (
         name.includes(query) ||
@@ -117,7 +116,7 @@ export const EmployeeListPage = () => {
       key: "name",
       render: (emp) => (
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold uppercase flex-shrink-0">
+          <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold uppercase flex-shrink-0">
             {(emp.fullName || emp.name || emp.email || "E")
               .charAt(0)
               .toUpperCase()}
@@ -125,7 +124,7 @@ export const EmployeeListPage = () => {
           <div>
             <Link
               to={`/employees/${emp._id}`}
-              className="font-semibold text-slate-900 hover:text-blue-600 transition-colors block leading-tight"
+              className="font-semibold text-slate-900 hover:text-emerald-700 transition-colors block leading-tight"
             >
               {emp.fullName || emp.name || "Unnamed Employee"}
             </Link>
@@ -138,9 +137,9 @@ export const EmployeeListPage = () => {
       title: "Employee ID",
       key: "employeeId",
       render: (emp) =>
-        emp.employeeId ? (
+        emp._id ? (
           <span className="font-mono text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">
-            {emp.employeeId}
+            {emp._id}
           </span>
         ) : (
           "—"
@@ -188,7 +187,7 @@ export const EmployeeListPage = () => {
             <Link
               to={`/employees/${emp._id}/edit`}
               title="Edit employee"
-              className="inline-flex items-center gap-1 h-7 px-2.5 rounded text-xs font-medium text-blue-600 bg-blue-50/60 border border-blue-200 hover:bg-blue-100/60 transition-colors"
+              className="inline-flex items-center gap-1 h-7 px-2.5 rounded text-xs font-medium text-emerald-700 bg-emerald-50/60 border border-emerald-200 hover:bg-emerald-100/60 transition-colors"
             >
               <Edit className="w-3.5 h-3.5" />
               Edit

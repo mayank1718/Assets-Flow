@@ -8,6 +8,9 @@ import DepartmentRouter from "./routes/department.routes.js";
 import AssetsRouter from "./routes/asset.route.js";
 import EmployeeRouter from "./routes/employee.route.js";
 import BookingRouter from "./routes/booking.routes.js";
+import helmet from "helmet";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 
@@ -20,6 +23,7 @@ app.use(
     credentials: true,
   }),
 );
+app.use(helmet());
 
 /* Routes */
 app.use("/api/auth", AuthRouter);

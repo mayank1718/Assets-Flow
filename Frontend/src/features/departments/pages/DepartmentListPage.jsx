@@ -157,7 +157,7 @@ const DepartmentListPage = () => {
                         </Link>
                         <Link
                           to={`/departments/${dept._id}/edit`}
-                          className="inline-flex items-center h-8 px-3 rounded-lg text-xs font-medium text-blue-600 border border-blue-200 hover:bg-blue-50 transition-colors duration-150"
+                          className="inline-flex items-center h-8 px-3 rounded-lg text-xs font-medium text-emerald-700 border border-emerald-200 hover:bg-emerald-50 transition-colors duration-150"
                         >
                           Edit
                         </Link>
